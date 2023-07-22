@@ -1,16 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://r2c0bp2y8u0q"]
+[gd_scene load_steps=3 format=3 uid="uid://r2c0bp2y8u0q"]
+
+[ext_resource type="Script" path="res://Scenes/title_scene.gd" id="1_p74ub"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_u7kk3"]
 font_size = 250
 
 [node name="TitleScene" type="Node2D"]
+script = ExtResource("1_p74ub")
 
 [node name="Title" type="Label" parent="."]
 offset_left = 149.0
 offset_top = 179.0
 offset_right = 1820.0
 offset_bottom = 591.0
-text = "Project Spear "
+text = "ProjectSpear "
 label_settings = SubResource("LabelSettings_u7kk3")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Start" type="Button" parent="."]
+offset_left = 646.0
+offset_top = 619.0
+offset_right = 1247.0
+offset_bottom = 772.0
+theme_override_font_sizes/font_size = 80
+toggle_mode = true
+button_pressed = true
+button_mask = 0
+text = "Start"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 744.0
+offset_top = 820.0
+offset_right = 1150.0
+offset_bottom = 963.0
+theme_override_font_sizes/font_size = 75
+toggle_mode = true
+text = "Quit"
