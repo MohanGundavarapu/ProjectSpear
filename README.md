@@ -9,4 +9,6 @@
  I will use Godot. 
  Maybe, my first step will be looking at the project settings.
  Where will this game be published? Maybe PC, maybe a steam game?
+ - Made Godot project and set up some basic settings, created a TitleScene, made an .exe
+ - Made a Utils script to close "game" with esc
 
