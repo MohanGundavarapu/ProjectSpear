@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://r2c0bp2y8u0q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u7kk3"]
+font_size = 200
+
+[node name="TitleScene" type="Node2D"]
+
+[node name="Title" type="Label" parent="."]
+offset_left = 177.0
+offset_top = 225.0
+offset_right = 1760.0
+offset_bottom = 501.0
+text = "UntitledProjectY"
+label_settings = SubResource("LabelSettings_u7kk3")
