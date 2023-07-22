@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="UntitledProjectY"
+config/name="SpearGuy"
 run/main_scene="res://scenes/title_scene.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 boot_splash/bg_color=Color(0, 0, 0, 1)
