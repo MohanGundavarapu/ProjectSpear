@@ -8,6 +8,8 @@ const DASH = 1200.0
 var dashing: bool = false
 
 @onready var animationPlayer = $AnimationPlayer
+@onready var animationTree = $AnimationTree
+@onready var animationState: AnimationNodeStateMachinePlayback = animationTree.get("parameters/playback")
 
 
 func _physics_process(delta):
@@ -18,12 +20,16 @@ func _physics_process(delta):
 	# Move Player
 	if not dashing:
 		if direction != Vector2.ZERO:
+			animationTree.set("parameters/Idle/blend_position",direction)
+			animationTree.set("parameters/Run/blend_position",direction)
+			animationState.travel("Run")
 			velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
 		else:
+			animationState.travel("Idle")
 			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
 	# Dash Player
-	if Input.is_action_just_pressed("Dash"):
+	if Input.is_action_just_pressed("Dash") and not dashing:
 		$Dash.start()
 		dashing = true
 		velocity = (direction * 10).normalized() * DASH
